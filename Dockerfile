@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:jessie
 ENV VERSION 2.0.38
 MAINTAINER Jay Shridharani <jshridha@gmail.com>
 
