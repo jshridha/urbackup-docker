@@ -1,5 +1,5 @@
 FROM debian:jessie
-ENV VERSION 2.0.38
+ENV VERSION 2.1.17
 MAINTAINER Jay Shridharani <jshridha@gmail.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y btrfs-tools apt-utils \
@@ -14,5 +14,5 @@ EXPOSE 55415
 EXPOSE 35623
 
 VOLUME [ "/var/urbackup", "/var/log", "/usr/share/urbackup" ]
-ENTRYPOINT ["/usr/sbin/urbackupsrv"]
+ENTRYPOINT ["/usr/bin/urbackupsrv"]
 CMD ["run"]
