@@ -1,5 +1,5 @@
 FROM debian:jessie
-ENV VERSION 2.1.19
+ENV VERSION 2.1.20
 MAINTAINER Jay Shridharani <jshridha@gmail.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y btrfs-tools apt-utils \
