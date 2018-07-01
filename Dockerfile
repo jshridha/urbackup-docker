@@ -1,11 +1,11 @@
 FROM debian:jessie
-ENV VERSION 2.1.20
+ENV VERSION 2.2.7
 MAINTAINER Jay Shridharani <jshridha@gmail.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y btrfs-tools apt-utils \
 	sqlite3 libcrypto++9 libcurl3 libfuse2 \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
-ADD https://www.urbackup.org/downloads/Server/${VERSION}/debian/stable/urbackup-server_${VERSION}_amd64.deb /root/install.deb
+ADD https://www.urbackup.org/downloads/Server/${VERSION}/debian/jessie/urbackup-server_${VERSION}_amd64.deb /root/install.deb
 RUN echo /var/urbackup | dpkg -i /root/install.deb && rm /root/install.deb
 
 EXPOSE 55413
